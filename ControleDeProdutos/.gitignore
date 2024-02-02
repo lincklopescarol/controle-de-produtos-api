@@ -132,3 +132,11 @@ $RECYCLE.BIN/
 
 # Mono Auto Generated Files
 mono_crash.*
+
+# .gitignore
+
+
+**/appsettings.json
+
+
+**/appsettings.Development.json
