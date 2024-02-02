@@ -1,0 +1,134 @@
+﻿# Arquivos temporários gerados pelo Visual Studio
+.vscode/
+.vs/
+bin/
+obj/
+
+# Pasta de dependências
+packages/
+
+# Arquivos de configuração do usuário
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Logs
+*.log
+
+# Arquivos de compilação
+*.exe
+*.dll
+*.pdb
+
+# Arquivos gerados pelo Visual Studio
+*.cache
+*.suo
+*.user
+*.sln.docstates
+*.csproj.user
+*.publishsettings
+*.pubxml
+*.publishproj
+*.obj
+*.cache
+*.jfm
+*.gpState
+
+# Diretório de saída da documentação
+docs/
+
+# Arquivos de configuração do Rider
+.idea/
+
+# Arquivos de compilação do Mono
+mono_crash.*
+
+# Arquivos de compilação para Xamarin
+*.userprefs
+*.user
+*.suo
+*.ide-wp
+*.ide-wl
+*.aps
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.user
+
+# Diretórios de armazenamento de teste
+TestResults/
+
+# Arquivos de log de teste
+*.trx
+*.log
+*.vspscc
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycler
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
