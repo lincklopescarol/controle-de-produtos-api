@@ -8,31 +8,42 @@ namespace ControleDeProdutos.Controllers
     [ApiController]
     public class ProdutosController : ControllerBase
     {
-       private readonly AppDbContext _context;
-       
+        private readonly AppDbContext _context;
+
         public ProdutosController(AppDbContext context)
         {
             _context = context;
         }
         [HttpGet]
-        public ActionResult <IEnumerable<Produto>>Get()
+        public ActionResult<IEnumerable<Produto>> Get()
         {
             var produtos = _context.Produtos.ToList();
-            if(produtos is null)
+            if (produtos is null)
             {
                 return NotFound("Produtos não encontrados.");
             }
             return produtos;
         }
-        [HttpGet("{id:int}")]
-        public ActionResult <Produto> Get(int id)
+        [HttpGet("{id:int}", Name="ObterProduto")]
+        public ActionResult<Produto> Get(int id)
         {
             var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
-            if(produto == null)
+            if (produto == null)
             {
                 return NotFound("Produto não encontrado.");
             }
             return produto;
+        }
+        [HttpPost]
+        public ActionResult Post([FromBody]Produto produto)
+        {
+            if (produto == null)
+                return BadRequest();
+
+            _context.Produtos.Add(produto);
+            _context.SaveChanges();
+            return new CreatedAtRouteResult("ObterProduto", 
+                new { id = produto.ProdutoId }, produto);
         }
     }
 }
