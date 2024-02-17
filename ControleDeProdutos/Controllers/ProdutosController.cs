@@ -1,4 +1,5 @@
 ﻿using ControleDeProdutos.Context;
+using ControleDeProdutos.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleDeProdutos.Controllers
@@ -12,6 +13,16 @@ namespace ControleDeProdutos.Controllers
         public ProdutosController(AppDbContext context)
         {
             _context = context;
+        }
+        [HttpGet]
+        public ActionResult <IEnumerable<Produto>>Get()
+        {
+            var produtos = _context.Produtos.ToList();
+            if(produtos is null)
+            {
+                return NotFound("Produtos não encontrados.");
+            }
+            return produtos;
         }
     }
 }
