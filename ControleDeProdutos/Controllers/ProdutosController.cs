@@ -57,5 +57,18 @@ namespace ControleDeProdutos.Controllers
 
             return Ok(produto);
         }
+        [HttpDelete("{id:int}")]
+        public ActionResult Delete(int id)
+        {
+            var produto = _context.Produtos.FirstOrDefault(produto => produto.ProdutoId == id);
+            if (produto == null)
+            {
+                return NotFound("Produto não encontrado.");
+            }
+            _context.Produtos.Remove(produto);
+            _context.SaveChanges();
+
+            return Ok();
+        }
     }
 }
